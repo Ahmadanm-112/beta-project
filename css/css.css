@@ -235,26 +235,10 @@ i {
     line-height: 1.5;
 }
 
-
 /* End Land Section */
 
 
 /* Start Services Section */
-
-.services {
-    /* background: #252222; */
-    padding: 40px 0;
-    text-align: center;
-}
-
-.services h1 {
-    color: var(--second-color);
-    margin: 10px;
-    margin-bottom: 7px;
-    position: relative;
-}
-
-
 
 /* End Services Section */
 
