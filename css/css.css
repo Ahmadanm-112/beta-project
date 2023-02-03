@@ -254,38 +254,6 @@ i {
     position: relative;
 }
 
-.services .container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.services .container .service {
-    /* background-color: var(--background-color); */
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.services .container .service i {
-    color: var(--second-color);
-    transition: 0.5s;
-}
-
-.services .container .service:hover i {
-    transform: translate(0, -7px);
-}
-
-.services .container .service i+p {
-    color: var(--second-color);
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.services .container .service p+p {
-    color: #fff;
-}
 
 
 /* End Services Section */
