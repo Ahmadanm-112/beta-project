@@ -1,0 +1,560 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    transition: 1s;
+}
+
+:root {
+    --background-color: #000000;
+    --background-color2: #252222;
+    --white-color: #fff;
+    --first-color: darkred;
+    --second-color: aqua;
+}
+
+
+/* Start Settings */
+
+.settings {
+    position: fixed;
+    background: rgb(255 255 255 / 80%);
+    height: 100vh;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    z-index: 15;
+    left: -200px;
+    transition: .5s;
+}
+
+.settings .option-box {
+    border-radius: 10px;
+    margin-top: 20px;
+    background: #4f4a4ad9;
+    padding: 6px;
+}
+
+.open {
+    left: 0;
+}
+
+.settings .option-box .container-icon {
+    position: absolute;
+    top: 200px;
+    right: -25px;
+    background: #ffffff;
+    cursor: pointer
+}
+
+.settings .option-box .fa-gear {
+    color: #000000;
+    padding: 6px 6px
+}
+
+.settings ul {
+    list-style: none;
+    padding: 0
+}
+
+.settings ul li {
+    display: inline-block;
+    /* padding-right: 15px; */
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.settings ul li:first-child {
+    background: #FFFFCC;
+}
+
+.settings ul li:nth-child(2) {
+    background: #660099;
+}
+
+.settings ul li:nth-child(3) {
+    background: #CC9900;
+}
+
+.settings ul li:nth-child(4) {
+    background: #33FFFF;
+}
+
+.settings ul li.active {
+    border: 3px solid #fff;
+}
+
+.settings .option-box span {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 6px;
+    background: #65ec113b;
+    /* color: #fff; */
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.settings .option-box span.active {
+    background: #65ec11f2;
+}
+
+
+/* End Settings */
+
+
+/* Start Up Button */
+
+.up {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    /* background: #000000; */
+    border: 3px solid #000000;
+    /* color: var(--second-color); */
+    z-index: 3;
+    display: none;
+}
+
+
+/* End Up Button */
+
+
+/* Start Navbar */
+
+i {
+    color: var(--second-color);
+    transition: .5s;
+}
+
+.hold {
+    background: url(../imgs/view.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+}
+
+.hold nav .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.hold nav .container .brand h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    /* text-shadow: 10px 10px 10px var(--second-color); */
+}
+
+.hold nav .container .links {
+    list-style-type: none;
+}
+
+.hold nav .container .links li {
+    display: inline;
+    padding: 7px;
+    text-decoration: none;
+    transition: 0.8s;
+    position: relative;
+}
+
+.hold nav .container .links li a {
+    text-decoration: none;
+    color: var(--second-color);
+    transition: 0.5s;
+    font-weight: bolder;
+    padding: 6px;
+}
+
+.hold nav .container .links li a.active {
+    background: #666;
+    border-radius: 10px;
+}
+
+.hold nav .container .links li a:hover {
+    opacity: 0;
+}
+
+.hold nav .container .links li .icon {
+    position: absolute;
+    left: 40%;
+    top: 100%;
+    color: var(--second-color);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.hold nav .container .links li a:hover~.icon {
+    left: 40%;
+    top: 20%;
+    opacity: 1;
+}
+
+
+/* End Navbar */
+
+
+/* Start Land Section */
+
+.hold .land .container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hold .land .container h1 {
+    color: var(--second-color);
+}
+
+.hold .land .container p {
+    color: #fff;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* End Land Section */
+
+
+/* Start Services Section */
+
+.services {
+    /* background: #252222; */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.services h1 {
+    color: var(--second-color);
+    margin: 10px;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.services .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.services .container .service {
+    /* background-color: var(--background-color); */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.services .container .service i {
+    color: var(--second-color);
+    transition: 0.5s;
+}
+
+.services .container .service:hover i {
+    transform: translate(0, -7px);
+}
+
+.services .container .service i+p {
+    color: var(--second-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.services .container .service p+p {
+    color: #fff;
+}
+
+
+/* End Services Section */
+
+
+/* Start Projects */
+
+.projects {
+    /* background: var(--background-color); */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.projects h1 {
+    color: var(--second-color);
+    margin: 10px;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.projects .container .cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    /* Another Way */
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* align-items: flex-start; */
+}
+
+.projects .container .cards .card {
+    background-color: var(--background-color2);
+    margin: 30px;
+    /* padding: 20px; */
+    transition: 0.5s;
+    text-align: center;
+    align-items: flex-start;
+    border-radius: 10px
+}
+
+
+/* .projects .container .cards .card:nth-of-type(2) {
+    transform: translate(0, -20px);
+} */
+
+.projects .container .cards .card:hover {
+    transform: translate(0, -20px);
+}
+
+.projects .container .cards .card .head {
+    padding: 10px;
+}
+
+.projects .container .cards .card .head svg {
+    transition: 0.5s;
+}
+
+.projects .container .cards .card:hover .head svg {
+    transform: rotate(360deg);
+}
+
+.projects .container .cards .card .head svg,
+.projects .container .cards .card .head h3 {
+    color: var(--second-color);
+}
+
+.projects .container .cards .card .body {
+    padding: 10px;
+}
+
+.projects .container .cards .card .body p {
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.projects .main .any {
+    background: #ffffff;
+}
+
+
+/* End Projects */
+
+
+/* Start About Me */
+
+.about-me {
+    padding: 40px 0;
+    /* background-color: var(--background-color2); */
+    text-align: center;
+    /* flex-direction: column; */
+}
+
+.about-me h1 {
+    color: var(--second-color);
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.about-me h2 {
+    color: var(--first-color);
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    font-size: 2em;
+}
+
+.about-me .cv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: var(--background-color);
+}
+
+.about-me .cv img {
+    width: 40%;
+    /* height: 10%; */
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+.about-me .cv p {
+    color: var(--white-color);
+    padding: 10px;
+    /* letter-spacing: 0.5px; */
+    line-height: 1.4em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.about-me .cv p span {
+    color: #ffff00;
+    font-weight: bolder;
+    font-style: italic;
+    /* position: relative; */
+}
+
+.about-me .cv .icons svg {
+    color: var(--second-color);
+    padding: 7px;
+}
+
+
+/* End About Me */
+
+
+/* Start Contact Me */
+
+.contact {
+    /* background: var(--background-color); */
+    padding: 40px 0;
+    text-align: center;
+    transition: red 1s;
+}
+
+.contact h1 {
+    color: var(--second-color);
+    /* margin: 10px; */
+    text-align: center;
+    position: relative;
+}
+
+.contact .container {
+    margin: auto;
+    max-width: 900px;
+    background: #1c1212e6;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact .container .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .container .icons svg {
+    color: var(--second-color);
+}
+
+.contact .container .icons p {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.contact .container .info form h3 {
+    color: var(--white-color);
+}
+
+.contact .container .info form p {
+    color: #ffffff;
+}
+
+.contact .container .info form .container-input {
+    padding: 10px;
+}
+
+.contact .container .info form .container-input label {
+    color: var(--second-color);
+}
+
+.contact .container form .container-input input {
+    border: none;
+    border-bottom: 2px solid aqua;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact ::placeholder {
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contact .container form .container-input .msg {
+    color: var(--second-color);
+    background: #272626;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.contact .container .info form .btn-submit {
+    background-color: var(--first-color);
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: var(--second-color);
+    border-radius: 10px;
+}
+
+
+/* End Contact Me */
+
+
+/* Start Footer */
+
+footer {
+    text-align: center;
+    /* background: var(--background-color2); */
+    padding: 10px;
+}
+
+footer p {
+    font-size: 20px;
+    color: var(--second-color);
+}
+
+footer p span {
+    color: var(--first-color);
+    font-weight: bold;
+}
+
+footer .icons svg {
+    color: var(--second-color);
+    padding: 5px;
+}
+
+
+/* End Footer */
